@@ -1,0 +1,137 @@
+{
+  "CRC": {
+    "scope": "Illustrative colorectal malignant resection only; not for polypectomy",
+    "fields": {
+      "histologic type": [
+        "adenocarcinoma",
+        "histologic type"
+      ],
+      "tumor size": [
+        "tumor size",
+        "mass measuring",
+        "mass measures"
+      ],
+      "grade": [
+        "moderately differentiated",
+        "well differentiated",
+        "poorly differentiated",
+        "histologic grade"
+      ],
+      "depth of invasion": [
+        "muscularis propria",
+        "submucosa",
+        "serosa",
+        "depth of invasion"
+      ],
+      "margins": [
+        "margin",
+        "margins"
+      ],
+      "regional lymph nodes": [
+        "lymph node",
+        "lymph nodes"
+      ],
+      "lymphovascular invasion": [
+        "lymphovascular invasion",
+        "lvi"
+      ]
+    }
+  },
+  "Breast": {
+    "scope": "Illustrative invasive breast resection only; not for core biopsy",
+    "fields": {
+      "laterality": [
+        "left breast",
+        "right breast",
+        "laterality"
+      ],
+      "histologic type": [
+        "invasive ductal",
+        "invasive lobular",
+        "invasive carcinoma",
+        "histologic type"
+      ],
+      "invasive tumor size": [
+        "tumor size",
+        "invasive tumor size"
+      ],
+      "grade": [
+        "nottingham",
+        "histologic grade"
+      ],
+      "margins": [
+        "margin",
+        "margins"
+      ],
+      "lymphovascular invasion": [
+        "lymphovascular invasion",
+        "lvi"
+      ],
+      "regional lymph nodes": [
+        "lymph node",
+        "sentinel node"
+      ]
+    }
+  },
+  "Endometrial": {
+    "scope": "Illustrative endometrial carcinoma hysterectomy only; not curettage",
+    "fields": {
+      "histologic type": [
+        "endometrioid",
+        "serous carcinoma",
+        "clear cell carcinoma",
+        "histologic type"
+      ],
+      "grade": [
+        "figo grade",
+        "histologic grade"
+      ],
+      "myometrial invasion": [
+        "myometrial invasion",
+        "myometrium"
+      ],
+      "lymphovascular invasion": [
+        "lymphovascular invasion",
+        "lvi"
+      ],
+      "cervical stromal involvement": [
+        "cervical stromal",
+        "cervical stroma"
+      ],
+      "serosal involvement": [
+        "uterine serosa",
+        "serosal involvement"
+      ]
+    }
+  },
+  "Lung": {
+    "scope": "Illustrative primary lung carcinoma resection only; not needle biopsy",
+    "fields": {
+      "histologic type": [
+        "adenocarcinoma",
+        "squamous cell carcinoma",
+        "histologic type"
+      ],
+      "tumor size": [
+        "tumor size",
+        "mass measuring"
+      ],
+      "visceral pleural invasion": [
+        "visceral pleura",
+        "pleural invasion"
+      ],
+      "margins": [
+        "margin",
+        "margins"
+      ],
+      "regional lymph nodes": [
+        "lymph node",
+        "lymph nodes"
+      ],
+      "lymphovascular invasion": [
+        "lymphovascular invasion",
+        "lvi"
+      ]
+    }
+  }
+}
