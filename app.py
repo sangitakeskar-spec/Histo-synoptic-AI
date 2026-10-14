@@ -12,7 +12,53 @@ with tab1:
     specialty=a.selectbox('Specialty',list(CHECKLISTS))
     procedure=b.selectbox('Procedure',['Resection','Biopsy','Polypectomy','Curettage','Other'])
     st.info('Checklist scope: '+CHECKLISTS[specialty]['scope'])
-    report=st.text_area('Paste a SYNTHETIC histopathology report',height=230,placeholder='SPECIMEN: Colon resection...')
+                     demo_reports = {
+            "Breast": """SPECIMEN: Breast resection
+Laterality: Left
+Histologic type: Invasive ductal carcinoma
+Tumor size: 25 mm
+Nottingham grade: 2
+Margins: Negative
+Lymphovascular invasion: Not identified
+Regional lymph nodes: 0/12 involved""",
+
+            "CRC": """SPECIMEN: Colon resection
+Histologic type: Adenocarcinoma
+Tumor size: 35 mm
+Tumor grade: Moderately differentiated
+Depth of invasion: Muscularis propria
+Margins: Negative
+Lymphovascular invasion: Not identified
+Regional lymph nodes: 0/15 involved""",
+
+            "Lung": """SPECIMEN: Lung resection
+Histologic type: Adenocarcinoma
+Tumor size: 30 mm
+Histologic grade: Moderately differentiated
+Margins: Negative
+Lymphovascular invasion: Not identified
+Regional lymph nodes: 0/10 involved""",
+
+            "Endometrial": """SPECIMEN: Hysterectomy
+Histologic type: Endometrioid carcinoma
+Tumor size: 30 mm
+Histologic grade: FIGO grade 2
+Myometrial invasion: Present
+Lymphovascular invasion: Not identified
+Margins: Negative"""
+        }
+            if "demo_text" not in st.session_state:
+            st.session_state.demo_text = ""
+
+            if st.button("📄 Load Demo Report"):
+                st.session_state.demo_text = demo_reports[specialty]
+
+            report = st.text_area(
+                "Paste a SYNTHETIC histopathology report",
+                key="demo_text",
+                height=230,
+                placeholder="SPECIMEN: Colon resection..."
+                )
     if st.button('Analyze demonstration report',type='primary'):
         if not report.strip():st.error('Paste a synthetic report first.')
         else:
