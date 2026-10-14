@@ -12,7 +12,7 @@ with tab1:
     specialty=a.selectbox('Specialty',list(CHECKLISTS))
     procedure=b.selectbox('Procedure',['Resection','Biopsy','Polypectomy','Curettage','Other'])
     st.info('Checklist scope: '+CHECKLISTS[specialty]['scope'])
-     demo_reports = {
+    demo_reports = {
             "Breast": """SPECIMEN: Breast resection
 Laterality: Left
 Histologic type: Invasive ductal carcinoma
