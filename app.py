@@ -47,24 +47,24 @@ Myometrial invasion: Present
 Lymphovascular invasion: Not identified
 Margins: Negative"""
         }
-            if "demo_text" not in st.session_state:
+ if "demo_text" not in st.session_state:
             st.session_state.demo_text = ""
 
-            if st.button("📄 Load Demo Report"):
-                st.session_state.demo_text = demo_reports[specialty]
+ if st.button("📄 Load Demo Report"):
+            st.session_state.demo_text = demo_reports[specialty]
 
-            report = st.text_area(
+ report = st.text_area(
                 "Paste a SYNTHETIC histopathology report",
                 key="demo_text",
                 height=230,
                 placeholder="SPECIMEN: Colon resection..."
-                )
-    if st.button('Analyze demonstration report',type='primary'):
+ )
+if st.button('Analyze demonstration report',type='primary'):
         if not report.strip():st.error('Paste a synthetic report first.')
         else:
             result=assess(report,specialty,procedure)
             st.session_state['qa']={'report_id':'DEMO-'+uuid.uuid4().hex[:8].upper(),'reviewed_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'specialty':specialty,'procedure':procedure,'result':result,'reviewer_actions':{}}
-    if 'qa' in st.session_state:
+ if 'qa' in st.session_state:
         qa=st.session_state['qa']; r=qa['result']
         if not r['applicable']:st.error(r['reason'])
         else:
