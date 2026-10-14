@@ -47,7 +47,7 @@ Myometrial invasion: Present
 Lymphovascular invasion: Not identified
 Margins: Negative"""
         }
- if "demo_text" not in st.session_state:
+   if "demo_text" not in st.session_state:
             st.session_state.demo_text = ""
 
  if st.button("📄 Load Demo Report"):
